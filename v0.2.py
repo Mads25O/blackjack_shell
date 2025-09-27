@@ -37,12 +37,14 @@ class Blackjack:
 
 
     def setup(self):
+        print("Cards are being dealt..")
         while len(self.player_hand) < 2:
             self.hit(self.player_hand)
+            print(f"Player got: {self.player_hand[len(self.player_hand)-1][0]} of {self.player_hand[len(self.player_hand)-1][1]}")
 
         while len(self.dealer_hand) < 1:
             self.hit(self.dealer_hand)
-    
+            print(f"Dealer got: {self.player_hand[0][0]} of {self.player_hand[0][1]}")
 
     def player_loop(self):
 
